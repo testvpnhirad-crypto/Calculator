@@ -1,0 +1,6 @@
+{
+  "name": "ماشین حساب اندروید آبی نورا | NovaCalc",
+  "description": "ماشین حساب حرفه‌ای و مدرن اندرویدی با تم آبی تیره و مشکی شیشه‌ای، امکانات علمی، تبدیل واحد، تاریخچه و بازخورد صوتی",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

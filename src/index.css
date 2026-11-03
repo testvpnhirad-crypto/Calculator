@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+  input, textarea {
+    user-select: auto;
+  }
+  body {
+    font-family: 'Vazirmatn', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+  .font-mono-numbers {
+    font-family: 'SF Pro Display', 'JetBrains Mono', -apple-system, monospace;
+    font-feature-settings: "tnum" 1, "cv01" 1;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom Scrollbar for iOS drawers */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(150, 150, 150, 0.3);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(150, 150, 150, 0.5);
+}
+
+/* iOS tactile button active physics */
+.ios-btn {
+  transition: transform 0.12s cubic-bezier(0.2, 0.8, 0.4, 1), filter 0.12s ease, opacity 0.12s ease;
+}
+.ios-btn:active {
+  transform: scale(0.92);
+  filter: brightness(0.88);
+}
+.dark .ios-btn:active {
+  filter: brightness(1.25);
+}
